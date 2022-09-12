@@ -1,2 +1,1 @@
 streamlit==1.12.2
-~treamlit==1.10.0
