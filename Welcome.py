@@ -38,10 +38,10 @@ Swift is a **save** language :
 - Explicit object "type"
 - Type inference
 - Optionals
-- Error hanling
+- Error handling
 
 
-#### Playfround
+#### Playground
 - Open **Xcode**
 - Choose **iOS**, select the **Blank template** and click Next
 - Choose a name
