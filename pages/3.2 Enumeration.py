@@ -179,3 +179,52 @@ for i in 1...3 {
 """
 
 st.code(code, language='swift')
+
+
+
+
+
+
+
+
+st.markdown("""
+##### Solution : Julie
+""")
+code = """
+enum Value: String {
+    case un = "As"
+    case deux = "Deux"
+    case trois = "Trois"
+    case quatre = "Quatre"
+    case cinq = "Cinq"
+}
+
+enum CardColor: String {
+    case trefle = "Trèfle"
+    case pique = "Pique"
+    case coeur = "Coeur"
+    case carreau = "Carreau"
+}
+
+struct Card {
+    var couleurDeCarte: CardColor
+    var valeurDeCarte: Value
+}
+
+var cartes = [
+    Card(couleurDeCarte: .coeur, valeurDeCarte: .quatre),
+    Card(couleurDeCarte: .carreau, valeurDeCarte: .cinq),
+    Card(couleurDeCarte: .pique, valeurDeCarte: .quatre),
+    Card(couleurDeCarte: .trefle, valeurDeCarte: .cinq),
+    Card(couleurDeCarte: .coeur, valeurDeCarte: .un),
+    Card(couleurDeCarte: .carreau, valeurDeCarte: .deux)
+]
+
+for _ in 1...3 {
+//    print(cartes.randomElement()!)
+    print("La carte est le \(cartes.randomElement()!.valeurDeCarte) de \(cartes.randomElement()!.couleurDeCarte)")
+
+}
+"""
+
+st.code(code, language='swift')
