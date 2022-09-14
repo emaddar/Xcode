@@ -3,6 +3,12 @@
 # Contents of ~/my_app/streamlit_app.py
 import streamlit as st
 
+st.set_page_config(
+    page_icon=":apple:",
+)
+
+
+
 def main_page():
     st.markdown("# Main page 🎈")
     st.sidebar.markdown("# Main page 🎈")
