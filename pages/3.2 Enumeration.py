@@ -134,7 +134,10 @@ st.markdown("""
 #### Exercice
 
 """)
+from PIL import Image
+image = Image.open('exercice.png')
 
+st.image(image)
 
 st.markdown("""
 ##### Solution : Emad
@@ -236,7 +239,7 @@ st.code(code, language='swift')
 
 
 st.markdown("""
-##### Solution : Julie ... Emad : for_in modification
+##### Solution : Julie ... Emad modification: for_in 
 """)
 code = """
 for i in 1...3 {
