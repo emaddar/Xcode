@@ -72,7 +72,7 @@ st.code(code, language='swift')
 
 
 st.markdown("""
-Example
+#### Example _countries_
 """)
 code = """
 
@@ -101,6 +101,67 @@ st.code(code, language='swift')
 
 
 
+
+st.markdown("""
+#### Example _cats_
+""")
+code = """
+// Déclaration d'un array de strings
+var cats: [String] = ["minou", "leChat", "monsieur", "garfield", "felix", "pspspspspsps"]
+
+// Afficher l'array
+print(cats)
+
+// Afficher chaque élément de l'array
+for cat in cats {
+    print(cat)
+}
+
+// Afficher chaque élément de l'array et leur position dans l'array
+for (index, cat) in cats.enumerated() {
+    print("\(cat) est le \(index + 1) élement de mon tableau")
+}
+
+// Connaitre le nombre d'éléments dans l'array
+cats.count
+
+// Afficher le 4ème élément de l'array (Index 3)
+print(cats[3])
+
+
+// Savoir si mon array contient l'élément "félix"
+if cats.contains("felix") {
+    print("Felix est dans le tableau")
+}
+
+// Insérer gamixQuinze dans l'array en 3ème position (index 2)
+cats.insert("gamixQuinze", at: 2)
+
+// Supprimer le dernier élément de l'array
+print(cats.removeLast())
+
+// Supprimer le 4ème élément de l'array (index 3)
+cats.remove(at: 3)
+
+// Remplacer le 3ème élément par gamixTreize
+cats[2] = "gamixTreize"
+print(cats)
+
+// Déclaration d'une fonction avec 2 paramètres (1 de type String et 1 de type Int) qui doit me retourner un élément de type String
+func catIdentity(name: String, age: Int) -> String {
+    let name = name
+    let age = age
+
+    return "Le chat s'appelle \(name) et a \(age) ans"
+}
+
+// Appels de la fonction pour qu'elle s'éxecute avec des arguments personalisés
+catIdentity(name: "Jean", age: 10)
+
+catIdentity(name: "paul", age: 1)
+"""
+
+st.code(code, language='swift')
 
 
 
