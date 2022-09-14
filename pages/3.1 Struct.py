@@ -20,6 +20,14 @@ However, suppose we want to store the same information of multiple people.
 
 In this case, creating variables for an individual person might be a tedious task. To overcome this we can create a struct that stores name and age. Now, this struct can be used for every person.
 """)
+
+
+
+
+st.markdown("""
+### Example _Cat_
+""")
+
 code = """
 import Foundation
 
