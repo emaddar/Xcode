@@ -29,6 +29,9 @@ st.code(code, language='swift')
 
 
 st.markdown("""
+___
+
+
 ### `Double.random( in:)` 
 ### Generate random _double_ number within a specific range
 ##### Example :
@@ -52,6 +55,9 @@ st.code(code, language='swift')
 
 
 st.markdown("""
+
+___
+
 ### `.randomElement()` 
 ### Pick a random element from an array
 ##### Example :
