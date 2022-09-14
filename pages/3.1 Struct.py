@@ -24,6 +24,35 @@ In this case, creating variables for an individual person might be a tedious tas
 
 
 
+
+
+st.markdown("""
+### Example _Person_
+""")
+
+code = """
+struct Person {
+    var name: String
+    var talkText: String
+    func talk(){  print(talkText)    }
+    init(name: String, talkText: String = "Olá") {
+        self.name = name
+        self.talkText = talkText
+} }
+var eu: Person = Person(name: "Danilo")
+eu.talk()                                     //       Olá
+var tu: Person = Person(name: "Mark", talkText: "Hello")
+tu.talk()                                     //       Hello
+"""
+
+st.code(code, language='swift')
+
+
+
+
+
+
+
 st.markdown("""
 ### Example _Cat_
 """)
@@ -35,9 +64,17 @@ struct Cat {
     var name : String
     var race : String
     var age : Int
+    var isVaccinated: Bool
+    
+    init(name: String, race :String = "Unknown", age : Int, isVaccinated: Bool = false){
+        self.name = name
+        self.race = race
+        self.age = age
+        self.isVaccinated = isVaccinated
+    }
 }
 // Cat1
-var cat1: Cat = Cat(name : "minou", race : "siamois", age : 2)
+var cat1: Cat = Cat(name : "minou", race : "siamois", age : 2, isVaccinated: true)
 print(cat1.age)  // 2
 print(cat1.name) // minou
 
@@ -45,7 +82,7 @@ print(cat1.name) // minou
 var cat2: Cat = Cat(name : "Felix", race : "europeen", age : 3)
 print(cat1.race)  // siamois
 print(cat1.name) // minou
-print(cat2) // Cat(name: "Felix", race: "europeen", age: 3)
+print(cat2) // Cat(name: "Felix", race: "europeen", age: 3, isVaccinatedA: false)
 
 // Tabel of cats
 var cats = [cat1, cat2]
@@ -53,6 +90,11 @@ for i in cats {
     print(i.name)
 }  // minou
    //Felix
+
+for cat in cats {
+    print(cat.isVaccinated)
+} // true
+  // false
 """
 
 st.code(code, language='swift')
