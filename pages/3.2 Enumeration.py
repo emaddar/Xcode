@@ -130,6 +130,9 @@ st.code(code, language='swift')
 
 
 
+from PIL import Image
+image = Image.open('exercice.png')
+
 
 
 
@@ -139,8 +142,48 @@ st.markdown("""
 #### Exercice
 
 """)
-code = """
+st.image(image)
 
+st.markdown("""
+##### Solution : Emad
+""")
+code = """
+enum Value: CaseIterable {
+    case one
+    case two
+    case three
+    case four
+    case five
+    case six
+    case seven
+    case eight
+    case nine
+    case ten
+    case valet
+    case queen
+    case king
+}
+
+
+
+enum Color: CaseIterable {
+    case spade
+    case heart
+    case tile
+    case clover
+}
+
+
+struct Cartes {
+    var value : Value
+    var color : Color
+}
+
+
+for i in 1...3 {
+    var new:Cartes = Cartes(value : .allCases.randomElement()!, color : .allCases.randomElement()!)
+    print("Carte \(i) : value = \(new.value) and color = \(new.color)")
+}
 """
 
 st.code(code, language='swift')
