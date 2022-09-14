@@ -12,7 +12,13 @@ st.markdown("<h1 style='text-align: center; color: black;'>Lesson 2.3</h1>", uns
 st.markdown("""
 # Struct
 
-...
+In Swift, a struct is used to store variables of different data types. For example,
+
+Suppose we want to store the name and age of a person. We can create two variables: name and age and store value.
+
+However, suppose we want to store the same information of multiple people.
+
+In this case, creating variables for an individual person might be a tedious task. To overcome this we can create a struct that stores name and age. Now, this struct can be used for every person.
 """)
 code = """
 import Foundation
