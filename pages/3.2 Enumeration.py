@@ -118,3 +118,29 @@ print(cat2) // Cat(name: "Felix", race: __lldb_expr_333.Race.europeen, age: 3, i
 
 st.code(code, language='swift')
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+st.markdown("""
+#### Exercice
+
+""")
+code = """
+
+"""
+
+st.code(code, language='swift')
