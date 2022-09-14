@@ -28,6 +28,27 @@ st.code(code, language='swift')
 
 
 
+
+
+st.markdown("""
+Or
+""")
+code = """
+enum Country: String {
+    case france = "France"
+    case syrie = "Syrie"
+    case brunei = "Brunei"
+    case philipines = "Philipines"
+}
+let universityCountry = Country.france.rawValue
+print(universityCountry) // France
+"""
+
+st.code(code, language='swift')
+
+
+
+
 st.markdown("""
 #### Example _Move_
 """)
@@ -67,7 +88,7 @@ code = """
 import Foundation
 
 enum Race {
-    case siamois, europeen, persan, angora, autre
+    case siamois, europeen, persan, angora, ather
 }
 
 struct Cat {
@@ -76,7 +97,7 @@ struct Cat {
     var age : Int
     var isVaccinated: Bool
 
-    init(name: String, race :Race = .autre, age : Int, isVaccinated: Bool = false){
+    init(name: String, race :Race = .ather, age : Int, isVaccinated: Bool = false){
         self.name = name
         self.race = race
         self.age = age
