@@ -11,7 +11,7 @@ st.markdown("""
 # Enumeration
 
 An enumeration defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
-#### Example _Country_
+#### Example _Country_ :earth_africa:
 """)
 code = """
 enum Country {
@@ -50,7 +50,7 @@ st.code(code, language='swift')
 
 
 st.markdown("""
-#### Example _Move_
+#### Example _Move_ :arrow_up: :arrow_down: :arrow_right: :arrow_left:
 """)
 code = """
 enum Move {
@@ -82,7 +82,7 @@ st.code(code, language='swift')
 
 
 st.markdown("""
-#### Example _Race_ with **Struct**
+#### Example _Race_ with **Struct** :smiley_cat: :smile_cat:  :heart_eyes_cat: :pouting_cat: :cat:
 """)
 code = """
 import Foundation
@@ -131,7 +131,7 @@ st.code(code, language='swift')
 
 
 st.markdown("""
-#### Exercice
+#### Exercice :spades: :hearts: :clubs: :diamonds:
 
 """)
 from PIL import Image
@@ -140,7 +140,7 @@ image = Image.open('exercice.png')
 st.image(image)
 
 st.markdown("""
-##### Solution : Emad
+##### Solution : Emad & Lorenzo :man:
 """)
 code = """
 enum Value: CaseIterable {
@@ -191,7 +191,7 @@ st.code(code, language='swift')
 
 
 st.markdown("""
-##### Solution : Julie
+##### Solution : Julie :woman:
 """)
 code = """
 enum Value: String {
@@ -239,7 +239,7 @@ st.code(code, language='swift')
 
 
 st.markdown("""
-##### Solution : Julie ... Emad modification: for_in 
+##### Solution : Julie ... Emad modification: for_in  :woman: :man:
 """)
 code = """
 for i in 1...3 {

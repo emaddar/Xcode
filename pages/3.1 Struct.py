@@ -7,42 +7,37 @@ st.set_page_config(
 )
 
 
-st.markdown("<h1 style='text-align: center; color: black;'>Lesson 2.3</h1>", unsafe_allow_html=True)
-
 st.markdown("""
-# Struct
+# Random
 
-In Swift, a struct is used to store variables of different data types. For example,
-
-Suppose we want to store the name and age of a person. We can create two variables: name and age and store value.
-
-However, suppose we want to store the same information of multiple people.
-
-In this case, creating variables for an individual person might be a tedious task. To overcome this we can create a struct that stores name and age. Now, this struct can be used for every person.
-""")
-
-
-
-
-
-
-st.markdown("""
-### Example _Person_
+### `Int.random( in:)` Generate random integers number within a specific range $$[a, b]$$
+##### Example :
 """)
 
 code = """
-struct Person {
-    var name: String
-    var talkText: String
-    func talk(){  print(talkText)    }
-    init(name: String, talkText: String = "Olá") {
-        self.name = name
-        self.talkText = talkText
-} }
-var eu: Person = Person(name: "Danilo")
-eu.talk()                                     //       Olá
-var tu: Person = Person(name: "Mark", talkText: "Hello")
-tu.talk()                                     //       Hello
+var aleaInt:Int = Int.random( in: 1...10) // this will generate integer number between 1 and 10
+print(aleaInt) // 8
+"""
+
+st.code(code, language='swift')
+
+
+
+st.markdown("""
+### `Double.random( in:)` Generate random double number within a specific range $$[a, b]$$
+##### Example :
+""")
+
+code = """
+for item in 1...4{
+    print(Double.random( in: 0...1)) // this will generate double number between 0 and 1
+}
+/* 
+0.966226978409593
+0.6771410253613475
+0.4939236087280944
+0.9151552047956388
+*/
 """
 
 st.code(code, language='swift')
@@ -51,10 +46,8 @@ st.code(code, language='swift')
 
 
 
-
-
 st.markdown("""
-### Example _Cat_
+### Example _Cat_ :smiley_cat: :pouting_cat:
 """)
 
 code = """
