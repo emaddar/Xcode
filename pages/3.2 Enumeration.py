@@ -50,3 +50,50 @@ case Move.left:
 """
 
 st.code(code, language='swift')
+
+
+
+
+
+
+
+
+
+
+st.markdown("""
+#### Example _Race_ with **Struct**
+""")
+code = """
+import Foundation
+
+enum Race {
+    case siamois, europeen, persan, angora, autre
+}
+
+struct Cat {
+    var name : String
+    var race : Race
+    var age : Int
+    var isVaccinated: Bool
+
+    init(name: String, race :Race = .autre, age : Int, isVaccinated: Bool = false){
+        self.name = name
+        self.race = race
+        self.age = age
+        self.isVaccinated = isVaccinated
+    }
+}
+// Cat1
+var cat1: Cat = Cat(name : "minou", race : .siamois, age : 2, isVaccinated: true)
+print(cat1.age)  // 2
+print(cat1.race) // siamois
+
+// Cat2
+var cat2: Cat = Cat(name : "Felix", race : .europeen, age : 3)
+print(cat2.race)  // europeen
+print(cat2.name) // Felix
+print(cat2) // Cat(name: "Felix", race: __lldb_expr_333.Race.europeen, age: 3, isVaccinated: false)
+"""
+
+st.code(code, language='swift')
+
