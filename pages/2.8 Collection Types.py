@@ -80,7 +80,7 @@ code = """
 var visitedContries = ["Brazil", "USA", "Sweden", "Colombia"]
 // Accessing an element using its index
 print(visitedContries[0])         //"Brazil"
-// Appending an element to the collection
+// Appending an element to the collection ... It will be the last element
 visitedContries.append("Italy")
 // Inserting an element at a specific index
 visitedContries.insert("Indonesia", at: 5)
