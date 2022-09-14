@@ -228,3 +228,21 @@ for _ in 1...3 {
 """
 
 st.code(code, language='swift')
+
+
+
+
+
+
+
+st.markdown("""
+##### Solution : Julie ... Emad : for_in modification
+""")
+code = """
+for i in 1...3 {
+    var CARD = cartes[Int.random(in: 0...cartes.count)]
+    print("La carte \(i) est le \(CARD.valeurDeCarte) de \(CARD.couleurDeCarte)")
+}
+"""
+
+st.code(code, language='swift')
