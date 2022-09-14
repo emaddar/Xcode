@@ -5,7 +5,7 @@ from cProfile import label
 import streamlit as st
 
 st.set_page_config(
-    page_icon=":blue_heart:",
+    page_icon=":apple:",
 )
 
 
