@@ -130,19 +130,11 @@ st.code(code, language='swift')
 
 
 
-from PIL import Image
-image = Image.open('exercice.png')
-
-
-
-
-
-
 st.markdown("""
 #### Exercice
 
 """)
-st.image(image)
+
 
 st.markdown("""
 ##### Solution : Emad
