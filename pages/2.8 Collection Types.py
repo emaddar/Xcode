@@ -86,6 +86,13 @@ visitedContries.append("Italy")
 visitedContries.insert("Indonesia", at: 5)
 // Getting the number of elements
 visitedContries.count             //6
+// Remove 4'em element
+visitedContries.remove(at: 3)
+// Remove last element
+visitedContries.removeLast()
+// Replace Second element by "Sryia"
+visitedContries[1] = "Syria"
+print(visitedContries)   // ["Brazil", "Syria", "Sweden", "Italy"]
 """
 
 st.code(code, language='swift')
