@@ -223,3 +223,52 @@ if st.button('Show Lorenzo\'s code '):
 st.markdown("""
 ---
 """)
+
+
+
+
+
+
+st.markdown("""
+
+
+#### Idea (Emad) : Change background randomely :game_die: :game_die: :game_die: :game_die: :game_die:
+
+""")
+from PIL import Image
+image = Image.open('Simple5.png')
+st.image(image, width=300)
+
+if st.button('Show code  '):
+    code = """
+        var myList: [Color] = [.red, .green, .blue, .orange, .black, .gray, .accentColor, .brown, .cyan, .indigo, .mint, .pink, .purple, .primary, .yellow, .secondary, .teal]
+    
+    @State var myColor :Color = Color.white
+        var body: some View {
+                ZStack{
+                    myColor
+                    .ignoresSafeArea()
+                    
+                    HStack(){
+                        Button(action: {
+                            myColor = myList.randomElement()!
+                        },
+                               label:{
+                            HStack{
+                                Image(systemName: "paintbrush.pointed.fill")
+                                Text("Alea")
+                            }
+                            .padding()
+                            .background(Color.black)
+                            .foregroundColor(.white)
+                            .cornerRadius(15)
+                        })
+                }
+            }
+        }
+    """
+    st.code(code, language='swift')
+
+st.markdown("""
+---
+""")
