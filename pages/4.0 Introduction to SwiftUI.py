@@ -153,3 +153,62 @@ struct correctionSantanaCard: View {
 """
 
 st.code(code, language='swift')
+
+
+
+
+code = """
+
+@State private var colorScreen = Color.white
+    var body: some View {
+        ZStack{
+            colorScreen
+                .ignoresSafeArea()
+
+            HStack{
+                Button(action: {
+                    colorScreen = Color.red
+                },
+                       label:{
+                    HStack{
+                        Image(systemName: "paintbrush.pointed.fill")
+                        Text("Red")
+                    }
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
+                })
+
+                Button(action: {
+                    colorScreen = Color.green
+                },
+                       label:{
+                    HStack{
+                        Image(systemName: "paintbrush.pointed.fill")
+                        Text("Green")
+                    }
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
+                })
+                Button(action: {
+                    colorScreen = .blue
+
+                },
+                       label:{
+                    HStack{
+                        Image(systemName: "paintbrush.pointed.fill")
+                        Text("Blue")
+                    }
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
+                })
+            }
+        }
+
+    }
+"""
