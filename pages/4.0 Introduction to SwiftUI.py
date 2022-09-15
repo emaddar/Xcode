@@ -49,7 +49,7 @@ struct ContentView_Previews: PreviewProvider {
 """
 
 st.markdown("""
----
+
 """)
 
 st.code(code, language='swift')
@@ -61,6 +61,7 @@ st.image(image, width=300)
 
 
 st.markdown("""
+---
 #### Example : My second app. 📱 📱 📱
 
 """)
@@ -91,6 +92,62 @@ struct Test2: View {
 struct Test2_Previews: PreviewProvider {
     static var previews: some View {
         Test2()
+    }
+}
+"""
+
+st.code(code, language='swift')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+st.markdown("""
+---
+#### Example : Personel Card 😎
+
+""")
+from PIL import Image
+image = Image.open('Three.png')
+
+st.image(image, width=300)
+
+
+
+code = """
+struct correctionSantanaCard: View {
+    var body: some View {
+        VStack(alignment: .leading){
+            HStack{
+                Image(systemName: "person.crop.circle")
+                    .font(.system(size: 130))
+                    .foregroundColor(.orange)
+                VStack (alignment: .leading){
+                    Text("Danilo santana")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    Text("Brazil")
+                        .foregroundColor(.gray)
+                    Text("Racing driver")
+                        .bold()
+                        .font(.callout)
+                        .padding(.top, 40)
+
+                }
+            }
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundColor(.gray)
+                .padding(.horizontal)
+        }
     }
 }
 """
