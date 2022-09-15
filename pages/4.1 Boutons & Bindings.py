@@ -239,7 +239,7 @@ from PIL import Image
 image = Image.open('Simple5.png')
 st.image(image, width=300)
 
-if st.button('Show code  '):
+if st.button('Show code     '):
     code = """
         var myList: [Color] = [.red, .green, .blue, .orange, .black, .gray, .accentColor, .brown, .cyan, .indigo, .mint, .pink, .purple, .primary, .yellow, .secondary, .teal]
     
