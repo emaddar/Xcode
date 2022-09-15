@@ -241,7 +241,7 @@ st.image(image, width=300)
 
 if st.button('Show code     '):
     code = """
-        var myList: [Color] = [.red, .green, .blue, .orange, .black, .gray, .accentColor, .brown, .cyan, .indigo, .mint, .pink, .purple, .primary, .yellow, .secondary, .teal]
+    var myList: [Color] = [.red, .green, .blue, .orange, .black, .gray, .accentColor, .brown, .cyan, .indigo, .mint, .pink, .purple, .primary, .yellow, .secondary, .teal]
     
     @State var myColor :Color = Color.white
         var body: some View {
@@ -266,6 +266,123 @@ if st.button('Show code     '):
                 }
             }
         }
+    """
+    st.code(code, language='swift')
+
+st.markdown("""
+---
+""")
+
+
+
+
+
+
+
+
+
+
+
+st.markdown("""
+
+
+#### Idea (Emad) : My first calculator :heavy_plus_sign: :heavy_minus_sign: :heavy_multiplication_x: :heavy_division_sign:
+
+""")
+from PIL import Image
+image = Image.open('calc.png')
+st.image(image, width=300)
+
+if st.button('Show code      '):
+    code = """
+        @State private var num1:Double = 0
+    @State private var num2:Double = 0
+    @State private var plus: Double = 0
+    
+    var body: some View {
+        VStack {
+            HStack{
+            TextField("Enter Num_1", value: $num1, format: .number)
+                .textFieldStyle(.roundedBorder)
+                .padding()
+                
+
+            TextField("Enter Num_2", value: $num2, format: .number)
+                .textFieldStyle(.roundedBorder)
+                .padding()
+                
+            }
+            .padding()
+            
+            
+            
+            
+            HStack{
+                                Button(action: {
+                                    plus = num1 + num2
+                                },
+                                       label:{
+                                        Image(systemName: "plus")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                })
+                
+                
+                            Button(action: {
+                                plus = num1 - num2
+                            },
+                                   label:{
+                                    Image(systemName: "minus")
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                            })
+                
+            
+
+                            Button(action: {
+                                plus = num1 * num2
+                            },
+                                   label:{
+                                    Image(systemName: "multiply")
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                            })
+                            
+                            
+                            
+                            Button(action: {
+                                plus = num1 / num2
+                            },
+                                   label:{
+                                    Image(systemName: "divide")
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                            })
+                
+            }.padding()
+                
+                
+            Image(systemName: "equal")
+                .padding()
+            
+            
+            Text("\(plus)")
+                .padding()
+                .overlay(
+                                                RoundedRectangle(cornerRadius: 5)
+                                                .stroke(lineWidth: 2.0)
+                                                 )
+            }
+    
+    }
     """
     st.code(code, language='swift')
 
