@@ -20,9 +20,9 @@ st.image(image, width=500)
 
 if st.button('Show code'):
     code = """
-        @State private var pourcentage: Double = 0
+        @State private var temperatur: Double = 0
     var colorScreen : Color {
-        switch pourcentage {
+        switch temperatur {
         case ...0 :
             return .blue
         case  1...25 :
@@ -35,7 +35,7 @@ if st.button('Show code'):
     }
         
         var statee : String {
-            switch pourcentage {
+            switch temperatur {
             case ...0 :
                 return "TRES FROID"
             case  1...25 :
@@ -56,7 +56,7 @@ if st.button('Show code'):
                 
           
             VStack {
-                  Text("\(Int(pourcentage))")
+                  Text("\(Int(temperatur))")
                     .bold()
                     .font(.system(size: 20, weight: .heavy, design: .default))
                     .padding()
@@ -66,7 +66,7 @@ if st.button('Show code'):
                     .padding()
 
 
-                Slider(value: $pourcentage, in: -20...50, step: 1)
+                Slider(value: $temperatur, in: -20...50, step: 1)
 
                 Spacer()
             }
