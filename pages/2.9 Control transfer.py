@@ -36,6 +36,45 @@ The statements within the for loop are then executed in sequence, through the fi
 
 
 
+
+
+
+
+
+st.markdown("""
+# The forEach Loop
+
+Calls the given closure on each element in the sequence in the same order as a for-in loop.
+""")
+code = """
+let numberWords = ["one", "two", "three"]
+for word in numberWords {
+    print(word)
+}
+// Prints "one"
+// Prints "two"
+// Prints "three"
+
+numberWords.forEach { word in
+    print(word)
+}
+// Same as above
+"""
+
+st.code(code, language='swift')
+
+
+
+
+
+
+
+
+
+
+
+
+
 st.markdown("""
 # The while Loop
 
