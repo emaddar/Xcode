@@ -21,7 +21,7 @@ st.image(image, width=700)
 if st.button('Show code'):
     code = """
     struct SwiftUIView: View {
-        @Statevar backColor: Color = Color.white
+        @State var backColor: Color = Color.white
         var body: some View {
             ZStack {
             backColor
