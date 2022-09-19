@@ -14,9 +14,9 @@ st.markdown("""
 #### Example 1 : 
 
 """)
-from PIL import Image
-image = Image.open('Simple4.png')
-st.image(image, width=700)
+#from PIL import Image
+#image = Image.open('Simple4.png')
+#st.image(image, width=700)
 
 if st.button('Show code'):
     code = """
