@@ -20,50 +20,47 @@ st.image(image, width=700)
 
 if st.button('Show code'):
     code = """
-struct SwiftUIView: View {
-    @Statevar backColor: Color = Color.white
-       var body: some View {
-           ZStack {
-           backColor
-                   .ignoresSafeArea()
-               HStack {
-                   
-                   ExtButton(text: "Red", fond: .red, backColor: $backColor)
-                   ExtButton(text: "Green", fond: .green, backColor: $backColor)
-                   ExtButton(text: "Blue", fond: .blue, backColor: $backColor)
-                   ExtButton(text: "Yellow", fond: .yellow, backColor: $backColor)
-               }
-           }
-           
-           
-           
-       }
-}
-    """
-st.code(code, language='swift')
-
-code = """
-struct ExtButton : View{
-    var text: String
-    var fond: Color
-    @Binding var backColor: Color
-    var body: some View{
-        Button {
-            backColor = fond
-        } label: {
-            HStack {
-                Image(systemName: "pencil")
-                Text(text)
+    struct SwiftUIView: View {
+        @Statevar backColor: Color = Color.white
+        var body: some View {
+            ZStack {
+            backColor
+                    .ignoresSafeArea()
+                HStack {
+                    
+                    ExtButton(text: "Red", fond: .red, backColor: $backColor)
+                    ExtButton(text: "Green", fond: .green, backColor: $backColor)
+                    ExtButton(text: "Blue", fond: .blue, backColor: $backColor)
+                    ExtButton(text: "Yellow", fond: .yellow, backColor: $backColor)
+                }
             }
-            .padding()
-            .background(fond)
-            .foregroundColor(.white)
-            .cornerRadius(10)
+            
+            
+            
         }
     }
-}
-    """
-st.code(code, language='swift')
+
+    struct ExtButton : View{
+        var text: String
+        var fond: Color
+        @Binding var backColor: Color
+        var body: some View{
+            Button {
+                backColor = fond
+            } label: {
+                HStack {
+                    Image(systemName: "pencil")
+                    Text(text)
+                }
+                .padding()
+                .background(fond)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+            }
+        }
+    }
+        """
+    st.code(code, language='swift')
 
 st.markdown("""
 ---
