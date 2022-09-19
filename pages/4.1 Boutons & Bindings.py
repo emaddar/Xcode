@@ -295,94 +295,100 @@ st.image(image, width=300)
 
 if st.button('Show code      '):
     code = """
-        @State private var num1:Double = 0
+    @State private var num1:Double = 0
     @State private var num2:Double = 0
     @State private var plus: Double = 0
-    
-    var body: some View {
-        VStack {
-            HStack{
-            TextField("Enter Num_1", value: $num1, format: .number)
-                .textFieldStyle(.roundedBorder)
-                .padding()
-                
 
-            TextField("Enter Num_2", value: $num2, format: .number)
-                .textFieldStyle(.roundedBorder)
+        var body: some View {
+            VStack {
+                HStack{
+                TextField("Enter Num_1", value: $num1, format: .number)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.system(size: 20, weight: .heavy, design: .default))
+                    .padding()
+
+
+                TextField("Enter Num_2", value: $num2, format: .number)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.system(size: 20, weight: .heavy, design: .default))
+                    .padding()
+
+                }
                 .padding()
-                
-            }
-            .padding()
-            
-            
-            
-            
-            HStack{
+
+
+
+
+                HStack{
+                                    Button(action: {
+                                        plus = num1 + num2
+                                    },
+                                           label:{
+                                            Image(systemName: "plus")
+                                        .background(Color.blue)
+                                        .foregroundColor(.white)
+                                    }).padding()
+                                    .frame(width: 80, height: 60)
+                                    .background(Color.blue)
+                                    .cornerRadius(15)
+
+
                                 Button(action: {
-                                    plus = num1 + num2
+                                    plus = num1 - num2
                                 },
                                        label:{
-                                        Image(systemName: "plus")
-                                    .padding()
-                                    .background(Color.blue)
+                                        Image(systemName: "minus")
                                     .foregroundColor(.white)
-                                    .cornerRadius(15)
                                 })
-                
-                
-                            Button(action: {
-                                plus = num1 - num2
-                            },
-                                   label:{
-                                    Image(systemName: "minus")
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                            })
-                
-            
+                                    .padding()
+                                    .frame(width: 80, height: 60)
+                                    .background(Color.blue)
+                                    .cornerRadius(15)
 
-                            Button(action: {
-                                plus = num1 * num2
-                            },
-                                   label:{
-                                    Image(systemName: "multiply")
+
+                                Button(action: {
+                                    plus = num1 * num2
+                                },
+                                       label:{
+                                        Image(systemName: "multiply")
+                                    .foregroundColor(.white)
+                                })
                                 .padding()
+                                .frame(width: 80, height: 60)
                                 .background(Color.blue)
-                                .foregroundColor(.white)
                                 .cornerRadius(15)
-                            })
-                            
-                            
-                            
-                            Button(action: {
-                                plus = num1 / num2
-                            },
-                                   label:{
-                                    Image(systemName: "divide")
+
+
+                                Button(action: {
+                                    plus = num1 / num2
+                                },
+                                       label:{
+                                        Image(systemName: "divide")
+                                    .foregroundColor(.white)
+                                })
                                 .padding()
+                                .frame(width: 80, height: 60)
                                 .background(Color.blue)
-                                .foregroundColor(.white)
                                 .cornerRadius(15)
-                            })
+
+                }.padding()
+
+
+                Image(systemName: "equal")
+                    .padding()
                 
-            }.padding()
-                
-                
-            Image(systemName: "equal")
-                .padding()
-            
-            
-            Text("\(plus)")
-                .padding()
-                .overlay(
-                                                RoundedRectangle(cornerRadius: 5)
-                                                .stroke(lineWidth: 2.0)
-                                                 )
-            }
-    
-    }
+
+                Text("\(plus)")
+                    .padding()
+                    .font(.system(size: 20, weight: .heavy, design: .default))
+                    .multilineTextAlignment(.center)
+                    .overlay(
+                                                    RoundedRectangle(cornerRadius: 5)
+                                                    .stroke(lineWidth: 2.0)
+                                                     )
+                }
+
+        }
     """
     st.code(code, language='swift')
 
