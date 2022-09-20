@@ -18,7 +18,7 @@ from PIL import Image
 image = Image.open('list.png')
 st.image(image, width=500)
 
-if st.button('Show code'):
+if st.button('Show code    '):
     code = """
     import SwiftUI
 

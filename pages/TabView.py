@@ -15,7 +15,7 @@ st.markdown("""
 
 """)
 from PIL import Image
-image = Image.open('flags.png')
+image = Image.open('tabview.png')
 st.image(image, width=500)
 
 if st.button('Show code'):
@@ -51,9 +51,5 @@ struct ContentView_Previews: PreviewProvider {
 
 st.markdown("""
 ---
-
- 
 """)
-
-
 

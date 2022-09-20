@@ -20,7 +20,7 @@ from PIL import Image
 image = Image.open('flags.png')
 st.image(image, width=500)
 
-if st.button('Show code'):
+if st.button('Show  code'):
     code = """
 
 struct geometryReaderExemple: View {
