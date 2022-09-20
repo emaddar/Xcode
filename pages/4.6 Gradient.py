@@ -9,15 +9,13 @@ st.set_page_config(
 
 
 st.markdown("""
-# GeometryReader
+# Gradient
 
-A container view that defines its content as a function of its own size and coordinate space.
-
-#### Example : flags 
+#### Example :  
 
 """)
 from PIL import Image
-image = Image.open('flags.png')
+image = Image.open('gradient.png')
 st.image(image, width=500)
 
 if st.button('Show code                    '):

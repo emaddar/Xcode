@@ -11,7 +11,7 @@ st.set_page_config(
 st.markdown("""
 # TabView
 
-#### Example : David 
+#### Example :  
 
 """)
 from PIL import Image
